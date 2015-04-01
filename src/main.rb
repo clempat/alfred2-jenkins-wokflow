@@ -9,7 +9,7 @@ require "json"
 basic_user     = ENV['JENKINS_USER_NAME']
 basic_password = ENV['JENKINS_PASSWORD']
 url            = ENV['JENKINS_URL']
-ur             = url.chomp("/")
+url            = url.chomp("/")
 cache          = "/tmp/jenkins-repositories.json"
 
 Alfred.with_friendly_error do |alfred|
@@ -36,7 +36,7 @@ Alfred.with_friendly_error do |alfred|
       :icon     => {
         :type => "filetype",
         :name => "#{color}.png"
-      }, 
+      },
       :subtitle => "#{url}",
       :arg      => url,
       :valid    => "yes",
